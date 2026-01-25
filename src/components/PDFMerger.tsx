@@ -3,6 +3,7 @@ import { PDFDocument } from 'pdf-lib';
 import { FileUp, X, FileText, Loader2, CheckCircle2, AlertCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { toast } from '@/hooks/use-toast';
+import capivarafyLogo from '@/assets/capivarafy-logo.png';
 
 interface PDFFile {
   file: File;
@@ -142,7 +143,11 @@ const PDFMerger = () => {
       <div className="w-full max-w-2xl mx-auto px-4">
         <div className="flex flex-col items-center justify-center py-20">
           <div className="relative mb-8">
-            <Loader2 className="w-16 h-16 text-primary animate-spin" />
+            <img 
+              src={capivarafyLogo} 
+              alt="Capivarafy" 
+              className="w-24 h-24 object-contain animate-bounce-gentle"
+            />
           </div>
           <div className="text-center space-y-4">
             <p className="text-xl md:text-2xl font-semibold text-foreground animate-pulse-fade">
