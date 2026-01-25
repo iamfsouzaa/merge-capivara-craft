@@ -1,7 +1,36 @@
 import PDFMerger from '@/components/PDFMerger';
+import faceIllustration from '@/assets/face-illustration.png';
+import sparkles from '@/assets/sparkles.png';
+
 const Index = () => {
-  return <div className="min-h-screen bg-background py-12 md:py-20">
-      <div className="container mx-auto">
+  return <div className="min-h-screen bg-background py-12 md:py-20 relative overflow-hidden">
+      {/* Decorative illustrations */}
+      <img 
+        src={faceIllustration} 
+        alt="" 
+        className="absolute top-20 left-4 md:left-12 lg:left-24 w-16 md:w-24 lg:w-32 opacity-80 pointer-events-none animate-bounce-gentle"
+        aria-hidden="true"
+      />
+      <img 
+        src={sparkles} 
+        alt="" 
+        className="absolute top-12 right-8 md:right-16 lg:right-32 w-12 md:w-16 lg:w-20 opacity-70 pointer-events-none"
+        aria-hidden="true"
+      />
+      <img 
+        src={sparkles} 
+        alt="" 
+        className="absolute bottom-32 left-8 md:left-20 w-8 md:w-12 opacity-50 pointer-events-none rotate-45"
+        aria-hidden="true"
+      />
+      <img 
+        src={faceIllustration} 
+        alt="" 
+        className="absolute bottom-40 right-4 md:right-16 lg:right-28 w-14 md:w-20 lg:w-28 opacity-60 pointer-events-none scale-x-[-1]"
+        aria-hidden="true"
+      />
+
+      <div className="container mx-auto relative z-10">
         {/* Header */}
         <header className="text-center mb-12 md:mb-16 px-4">
           
