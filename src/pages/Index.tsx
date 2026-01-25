@@ -35,8 +35,8 @@ const Index = () => {
       </div>
 
       {/* Scrolling Banner */}
-      <div className="fixed bottom-0 left-0 right-0 bg-yellow-400 text-black py-3 overflow-hidden z-50">
-        <div className="animate-marquee whitespace-nowrap inline-block">
+      <div className="fixed bottom-0 left-0 right-0 bg-yellow-400 text-black py-3 overflow-hidden z-50 group cursor-pointer">
+        <div className="animate-marquee group-hover:[animation-play-state:paused] whitespace-nowrap inline-block">
           <span className="mx-8">
             🚀 Acesse o Capivarafy.com - maior especialista em edital tecnova - Edital SC aberto R$200k para seu produto acesse aqui → 
             <a 
