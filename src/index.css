@@ -186,6 +186,10 @@ All colors MUST be HSL.
     animation: pulse-fade 2s ease-in-out infinite;
   }
 
+  .animate-bounce-gentle {
+    animation: bounce-gentle 1.5s ease-in-out infinite;
+  }
+
   .animation-delay-300 {
     animation-delay: 0.3s;
   }
@@ -200,6 +204,15 @@ All colors MUST be HSL.
     }
     50% {
       opacity: 1;
+    }
+  }
+
+  @keyframes bounce-gentle {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
     }
   }
 }
