@@ -181,4 +181,25 @@ All colors MUST be HSL.
   .soft-shadow-inset {
     box-shadow: var(--soft-shadow-inset);
   }
+
+  .animate-pulse-fade {
+    animation: pulse-fade 2s ease-in-out infinite;
+  }
+
+  .animation-delay-300 {
+    animation-delay: 0.3s;
+  }
+
+  .animation-delay-600 {
+    animation-delay: 0.6s;
+  }
+
+  @keyframes pulse-fade {
+    0%, 100% {
+      opacity: 0.4;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
 }
