@@ -1,15 +1,10 @@
 import PDFMerger from '@/components/PDFMerger';
-
 const Index = () => {
-  return (
-    <div className="min-h-screen bg-background py-12 md:py-20">
+  return <div className="min-h-screen bg-background py-12 md:py-20">
       <div className="container mx-auto">
         {/* Header */}
         <header className="text-center mb-12 md:mb-16 px-4">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
-            <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-            Ferramenta Gratuita
-          </div>
+          
           
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground tracking-tight mb-4">
             Junte seus PDFs em um
@@ -39,30 +34,18 @@ const Index = () => {
         <div className="animate-marquee group-hover:[animation-play-state:paused] whitespace-nowrap inline-block">
           <span className="mx-8">
             🚀 Acesse o Capivarafy.com - maior especialista em edital tecnova - Edital SC aberto R$200k para seu produto acesse aqui → 
-            <a 
-              href="https://www.capivarafy.com" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="font-bold underline hover:no-underline ml-1"
-            >
+            <a href="https://www.capivarafy.com" target="_blank" rel="noopener noreferrer" className="font-bold underline hover:no-underline ml-1">
               www.capivarafy.com
             </a>
           </span>
           <span className="mx-8">
             🚀 Acesse o Capivarafy.com - maior especialista em edital tecnova - Edital SC aberto R$200k para seu produto acesse aqui → 
-            <a 
-              href="https://www.capivarafy.com" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="font-bold underline hover:no-underline ml-1"
-            >
+            <a href="https://www.capivarafy.com" target="_blank" rel="noopener noreferrer" className="font-bold underline hover:no-underline ml-1">
               www.capivarafy.com
             </a>
           </span>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
