@@ -269,15 +269,15 @@ const PDFMerger = () => {
       )}
 
       {/* Action Button */}
-      <div className="mt-8">
+      <div className="mt-8 flex justify-center">
         <Button
           onClick={mergePDFs}
           disabled={!canMerge || isProcessing}
-          className="w-full h-14 text-base font-semibold rounded-xl transition-all duration-300"
-          size="lg"
+          className="rounded-full px-6 py-2 h-10 text-sm font-semibold bg-yellow-500 hover:bg-yellow-600 text-black border-none transition-all duration-300"
+          size="sm"
         >
-          <CheckCircle2 className="w-5 h-5 mr-2" />
-          Gerar PDF Único
+          <CheckCircle2 className="w-4 h-4 mr-1" />
+          Gerar
         </Button>
       </div>
 
