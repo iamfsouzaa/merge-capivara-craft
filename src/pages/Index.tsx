@@ -26,12 +26,40 @@ const Index = () => {
         <PDFMerger />
 
         {/* Footer */}
-        <footer className="mt-20 text-center">
+        <footer className="mt-20 text-center pb-16">
           <p className="text-sm text-muted-foreground">
             Feito com ♥ por{' '}
             <span className="font-semibold text-foreground">Capivarafy</span>
           </p>
         </footer>
+      </div>
+
+      {/* Scrolling Banner */}
+      <div className="fixed bottom-0 left-0 right-0 bg-yellow-400 text-black py-3 overflow-hidden z-50">
+        <div className="animate-marquee whitespace-nowrap inline-block">
+          <span className="mx-8">
+            🚀 Acesse o Capivarafy.com - maior especialista em edital tecnova - Edital SC aberto R$200k para seu produto acesse aqui → 
+            <a 
+              href="https://www.capivarafy.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="font-bold underline hover:no-underline ml-1"
+            >
+              www.capivarafy.com
+            </a>
+          </span>
+          <span className="mx-8">
+            🚀 Acesse o Capivarafy.com - maior especialista em edital tecnova - Edital SC aberto R$200k para seu produto acesse aqui → 
+            <a 
+              href="https://www.capivarafy.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="font-bold underline hover:no-underline ml-1"
+            >
+              www.capivarafy.com
+            </a>
+          </span>
+        </div>
       </div>
     </div>
   );
