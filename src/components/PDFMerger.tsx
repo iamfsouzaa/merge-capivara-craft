@@ -273,7 +273,7 @@ const PDFMerger = () => {
         <Button
           onClick={mergePDFs}
           disabled={!canMerge || isProcessing}
-          className="rounded-full px-6 py-2 h-10 text-sm font-semibold bg-yellow-500 hover:bg-yellow-600 text-black border-none transition-all duration-300"
+          className="rounded-full px-6 py-2 h-10 text-sm font-semibold bg-yellow-500 hover:bg-yellow-400 text-black border-none transition-all duration-300 hover:shadow-[0_0_20px_rgba(234,179,8,0.6)] hover:scale-105"
           size="sm"
         >
           <CheckCircle2 className="w-4 h-4 mr-1" />
