@@ -26,7 +26,7 @@ const Index = () => {
           <img src={sparkles} alt="" className="absolute -top-2 right-1/4 w-6 md:w-8 opacity-50 -rotate-12" aria-hidden="true" />
           <p className="text-sm text-muted-foreground">
             Feito com ♥ por{' '}
-            <span className="font-semibold text-foreground">Capivarafy</span>
+            <a href="https://www.capivarafy.com" target="_blank" rel="noopener noreferrer" className="font-semibold text-foreground hover:text-primary transition-colors">Capivarafy</a>
           </p>
         </footer>
       </div>
