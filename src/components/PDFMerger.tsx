@@ -100,10 +100,24 @@ const PDFMerger = () => {
 
       for (const { file } of files) {
         const arrayBuffer = await file.arrayBuffer();
-        const pdf = await PDFDocument.load(arrayBuffer);
+        const pdf = await PDFDocument.load(arrayBuffer, { 
+          ignoreEncryption: true,
+          updateMetadata: false,
+        });
         const copiedPages = await mergedPdf.copyPages(pdf, pdf.getPageIndices());
         copiedPages.forEach((page) => mergedPdf.addPage(page));
       }
+
+      // Preserve metadata from the first PDF
+      const firstBuffer = await files[0].file.arrayBuffer();
+      const firstPdf = await PDFDocument.load(firstBuffer, { ignoreEncryption: true });
+      const meta = firstPdf.getTitle() || firstPdf.getAuthor() || firstPdf.getSubject();
+      if (firstPdf.getTitle()) mergedPdf.setTitle(firstPdf.getTitle()!);
+      if (firstPdf.getAuthor()) mergedPdf.setAuthor(firstPdf.getAuthor()!);
+      if (firstPdf.getSubject()) mergedPdf.setSubject(firstPdf.getSubject()!);
+      if (firstPdf.getKeywords()) mergedPdf.setKeywords(firstPdf.getKeywords()!.split(','));
+      mergedPdf.setProducer('Capivarafy PDF Merger');
+      mergedPdf.setCreator('Capivarafy');
 
       const mergedPdfBytes = await mergedPdf.save();
       const blob = new Blob([new Uint8Array(mergedPdfBytes)], { type: 'application/pdf' });
